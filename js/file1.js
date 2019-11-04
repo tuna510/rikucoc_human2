@@ -1,7 +1,7 @@
 //ヘッダーの高さ分だけコンテンツを下げる
 $(function () {
     var height = $("#header").height();
-    // 100px余裕を持たせる
+    // 余裕を持たせる
     $("body").css("margin-top", height + 100);
 });
 
@@ -12,7 +12,7 @@ $(function () {
     $('a[href^="#"]').click(function () {
         var href = $(this).attr("href");
         var target = $(href == "#" || href == "" ? 'html' : href);
-        var position = target.offset().top - 50;
+        var position = target.offset().top - 100;
         var speed = 600;
         $('body,html').animate({
             scrollTop: position
@@ -29,7 +29,7 @@ $(function () {
             var imgPos = $(this).offset().top;
             var scroll = $(window).scrollTop();
             var windowHeight = $(window).height();
-            if (scroll > imgPos - windowHeight + windowHeight / 2.5) {
+            if (scroll > imgPos - windowHeight + windowHeight / 3) {
                 $(this).addClass("fade_on");
             } else {
                 $(this).removeClass("fade_on");
