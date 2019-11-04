@@ -23,14 +23,19 @@ $(function () {
 
 // ------------------------------------------
 // 文字がふわっと出てくる
-$('.test').css('visibility', 'hidden');
-$(window).scroll(function () {
-    var windowHeight = $(window).height(),
-        topWindow = $(window).scrollTop();
-    $('.test').each(function () {
-        var targetPosition = $(this).offset().top;
-        if (topWindow > targetPosition - windowHeight + 100) {
-            $(this).addClass("fadeInDown");
-        }
+$(function () {
+
+    $(window).scroll(function () {
+
+        $(".fade_off").each(function () {
+            var imgPos = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > imgPos - windowHeight + windowHeight - 350) {
+                $(this).addClass("fade_on");
+            } else {
+                $(this).removeClass("fade_on");
+            }
+        });
     });
 });
