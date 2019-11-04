@@ -20,3 +20,17 @@ $(function () {
         return false;
     });
 });
+
+// ------------------------------------------
+// 文字がふわっと出てくる
+$('.test').css('visibility', 'hidden');
+$(window).scroll(function () {
+    var windowHeight = $(window).height(),
+        topWindow = $(window).scrollTop();
+    $('.test').each(function () {
+        var targetPosition = $(this).offset().top;
+        if (topWindow > targetPosition - windowHeight + 100) {
+            $(this).addClass("fadeInDown");
+        }
+    });
+});
