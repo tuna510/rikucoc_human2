@@ -221,6 +221,8 @@ body {
 }
 
 .title_back {
+    position: absolute;
+    top: 1230px;
     width: 100%;
     height: 150px;
 }
@@ -242,29 +244,7 @@ body {
     }
 }
 
-/* .title_logo:before,
-.title_logo:after {
-    position: absolute;
-    display: inline-block;
-    width: 0;
-    content: "";
-    height: 100px;
-    background-color: #5b4257;
-    transition: 2s;
-}
 
-.title_logo:before {
-    left: 50%;
-}
-
-.title_logo:after {
-    right: 50%;
-}
-
-.text:hover:before,
-.text:hover:after {
-    width: 50%;
-} */
 
 /* --------------------------------------- */
 
