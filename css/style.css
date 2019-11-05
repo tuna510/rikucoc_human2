@@ -409,10 +409,10 @@ body {
     transform-origin: 185%;
     width: 150px;
     transform-style: preserve-3d;
-    animation: rotate 3.5s infinite ease 1s both;
+    animation: etator 3.5s infinite ease 1s both;
 }
 
-@keyframes rotate {
+@keyframes etator {
     from {
         transform: rotateY(0deg);
     }
