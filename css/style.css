@@ -4,29 +4,15 @@
 }
 
 body {
-    /* background-image: url(../img/haikei3.png); */
-    /* width: 100%; */
-    /* background-size: contain; */
     background-color: rgb(0, 0, 0);
 }
 
-/* トップ画像 */
-/* #test {
-    background-image: url(../img/top.png);
-    background-size: cover;
-    width: 100%;
-    height: 200px;
-}
-
-.testt {
-    background-color: rgb(0, 0, 0);
-} */
 
 
 #header {
     position: fixed;
     top: 0;
-    background-color: rgba(34, 26, 26, 0.651);
+    background-color: rgb(0, 0, 0);
     width: 100%;
     height: 60px;
     z-index: 1145141919810;
@@ -228,13 +214,59 @@ body {
 }
 
 .title_logo {
-    width: 80%;
-    height: 150px;
-    margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.418);
+    position: absolute;
+    width: 100%;
+    top: 1230px;
+    overflow: hidden;
 }
 
+.title_back {
+    width: 100%;
+    height: 150px;
+}
 
+.title_back {
+    background-color: #613e5b;
+    animation: img-wrap 7s cubic-bezier(.4, 0, .2, 1);
+}
+
+@keyframes img-wrap {
+    0% {
+        clip-path: circle(0 at 50% 50%);
+        -webkit-clip-path: circle(0 at 50% 50%);
+    }
+
+    100% {
+        clip-path: circle(100% at 50% 50%);
+        -webkit-clip-path: circle(100% at 50% 50%);
+    }
+}
+
+/* .title_logo:before,
+.title_logo:after {
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    content: "";
+    height: 100px;
+    background-color: #5b4257;
+    transition: 2s;
+}
+
+.title_logo:before {
+    left: 50%;
+}
+
+.title_logo:after {
+    right: 50%;
+}
+
+.text:hover:before,
+.text:hover:after {
+    width: 50%;
+} */
+
+/* --------------------------------------- */
 
 .fade_off {
     opacity: 0;
