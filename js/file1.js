@@ -29,26 +29,50 @@ $(function () {
             var imgPos = $(this).offset().top;
             var scroll = $(window).scrollTop();
             var windowHeight = $(window).height();
-            if (scroll > imgPos - windowHeight + windowHeight / 3) {
+            if (scroll > imgPos - windowHeight + windowHeight / 5) {
                 $(this).addClass("fade_on");
             }
         });
     });
 });
-// ------------------------------------------
+
+// カードがふわっと出てくる
 $(function () {
-    $(window).scroll(function () {
-        $(".fadee_off").each(function () {
-            var imgPos = $(this).offset().top;
+    function animation() {
+        $('.kimi_back').each(function () {
+            var target = $(this).offset().top;
             var scroll = $(window).scrollTop();
             var windowHeight = $(window).height();
-            if (scroll > imgPos - windowHeight + windowHeight / 5) {
-                $(this).addClass("fadee_on");
+            if (scroll > target - windowHeight) {
+                $(this).css('opacity', '0.5');
+                $(this).css('transform', 'translateY(0)');
             }
         });
+    }
+    animation();
+    $(window).scroll(function () {
+        animation();
     });
 });
 
+$(function () {
+    function animation() {
+        $('.title_logo').each(function () {
+            var target = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > target - windowHeight) {
+                $(this).css('opacity', '1');
+                $(this).css('transform', 'translateY(0)');
+            }
+        });
+    }
+    animation();
+    $(window).scroll(function () {
+        animation();
+    });
+});
+// ------------------------------------------
 
 
 // $(function () {
