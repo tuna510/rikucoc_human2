@@ -2,7 +2,7 @@
 $(function () {
     var height = $("#header").height();
     // 余裕を持たせる
-    $("body").css("margin-top", height + 100);
+    $("body").css("margin-top", height);
 });
 
 // ---------------------------------------
@@ -31,8 +31,6 @@ $(function () {
             var windowHeight = $(window).height();
             if (scroll > imgPos - windowHeight + windowHeight / 3) {
                 $(this).addClass("fade_on");
-            } else {
-                $(this).removeClass("fade_on");
             }
         });
     });
@@ -46,9 +44,16 @@ $(function () {
             var windowHeight = $(window).height();
             if (scroll > imgPos - windowHeight + windowHeight / 5) {
                 $(this).addClass("fadee_on");
-            } else {
-                $(this).removeClass("fadee_on");
             }
         });
     });
 });
+
+
+
+// $(function () {
+//     $('.menu-trigger').on('click', function () {
+//         $(this).toggleClass('active');
+//         return false;
+//     });
+// });
