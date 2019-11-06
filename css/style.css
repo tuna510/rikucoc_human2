@@ -362,12 +362,15 @@ body {
     }
 }
 
+.front,
+.back {
+    width: 150px;
+    height: 150px;
+}
 
 .css-hidden {
     position: absolute;
-    width: 150px;
-    height: 150px;
-    top: 150px;
+    top: -150px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
@@ -377,7 +380,7 @@ body {
 }
 
 .css-back {
-    left: 35px;
+    left: 28px;
     transform: rotateY(180deg);
 }
 
