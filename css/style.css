@@ -1,110 +1,488 @@
-//ヘッダーの高さ分だけコンテンツを下げる
-$(function () {
-    var height = $("#header").height();
-    // 余裕を持たせる
-    $("body").css("margin-top", height);
-});
+* {
+    margin: 0;
+    padding: 0;
+}
 
-// ---------------------------------------
+body {
+    background-color: rgb(0, 0, 0);
+    z-index: 1;
+}
 
-// スクロール
-$(function () {
-    $('a[href^="#"]').click(function () {
-        var href = $(this).attr("href");
-        var target = $(href == "#" || href == "" ? 'html' : href);
-        var position = target.offset().top - 70;
-        var speed = 600;
-        $('body,html').animate({
-            scrollTop: position
-        }, speed, 'swing');
-        return false;
-    });
-});
+#header {
+    position: fixed;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 60px;
+    z-index: 1145141919810;
+}
 
-// ------------------------------------------
-// 文字がふわっと出てくる
-$(function () {
-    $(window).scroll(function () {
-        $(".fade_off").each(function () {
-            var imgPos = $(this).offset().top;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            if (scroll > imgPos - windowHeight + windowHeight / 5) {
-                $(this).addClass("fade_on");
-            }
-        });
-    });
-});
+.cp_cont {
+    height: 45px;
+}
 
-// 血がびしゃあ
-$(function () {
-    $(window).scroll(function () {
-        $(".chi_a").each(function () {
-            var imgPos = $(this).offset().top;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            if (scroll > imgPos - windowHeight + windowHeight / 1.5) {
-                $(this).addClass("chi_on");
-            }
-        });
-    });
-});
+.cp_offcm01 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: inline-block;
+}
 
-$(function () {
-    $(window).scroll(function () {
-        $(".chi_b").each(function () {
-            var imgPos = $(this).offset().top;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            if (scroll > imgPos - windowHeight + windowHeight / 1.5) {
-                $(this).addClass("chi_on");
-            }
-        });
-    });
-});
+.cp_offcm01 .cp_menu {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    width: 150px;
+    height: 100%;
+    transition: 0.53s transform;
+    transition-timing-function: cubic-bezier(.38, .52, .23, .99);
+    background-color: #551b1bee;
+    opacity: 0.93;
+}
 
-// カードがふわっと出てくる
-$(function () {
-    function animation() {
-        $('.kimi_back').each(function () {
-            var target = $(this).offset().top;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            if (scroll > target - windowHeight) {
-                $(this).css('opacity', '0.5');
-                $(this).css('transform', 'translateY(0)');
-            }
-        });
+.cp_offcm01 .cp_menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+.cp_offcm01 .cp_menu li {
+    list-style: none;
+}
+
+.cp_offcm01 .cp_menu li a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-bottom: 1px solid #a03a3a;
+    font-family: 'M PLUS 1p', sans-serif;
+}
+
+.cp_offcm01 #cp_toggle01 {
+    position: absolute;
+    display: none;
+    opacity: 0;
+}
+
+.cp_offcm01 #cp_toggle01:checked~.cp_menu {
+    transform: translateX(-100vw);
+}
+
+/* トグルメニュー */
+/* メニューの色を変えてます。岡島 */
+.cp_offcm01 #cp_toggle01~label {
+    display: block;
+    padding: 0 5px 5px 5px;
+    cursor: pointer;
+    transition: 0.5s transform;
+    transition-timing-function: cubic-bezier(.61, -0.38, .37, 1.27);
+    text-align: center;
+    columns: #de0011;
+    ;
+}
+
+.cp_offcm01 #cp_toggle01:checked~label {
+    -webkit-transform: translateX(-150px);
+    transform: translateX(-150px);
+}
+
+/* コンテンツ */
+.cp_contents {
+    color: #de0011;
+    padding-left: 10px;
+    text-align: center;
+}
+
+/* 10/14追加・ロゴマーク 岡島 */
+.cp_contents img {
+    max-width: 50%;
+    margin: 0 auto;
+
+}
+
+/*チェックボックス等は非表示に*/
+.nav-unshown {
+    display: none;
+}
+
+/*アイコンのスペース*/
+#nav-open {
+    width: 30px;
+    height: 22px;
+    vertical-align: middle;
+    margin-bottom: 10px;
+}
+
+/*ハンバーガーアイコン*/
+#nav-open span,
+#nav-open span:before,
+#nav-open span:after {
+    position: absolute;
+    height: 3px;
+    /*線の太さ*/
+    width: 25px;
+    /*長さ*/
+    border-radius: 3px;
+    background: rgb(255, 255, 255);
+    display: block;
+    content: '';
+    cursor: pointer;
+    font-family: serif;
+}
+
+#nav-open span:before {
+    bottom: -8px;
+}
+
+#nav-open span:after {
+    bottom: -16px;
+}
+
+/* */
+.menu-trigger,
+.menu-trigger span {
+    display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box;
+}
+
+.menu-trigger {
+    position: relative;
+    width: 50px;
+    height: 44px;
+}
+
+.menu-trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.menu-trigger span:nth-of-type(1) {
+    top: 0;
+}
+
+.menu-trigger span:nth-of-type(2) {
+    top: 20px;
+}
+
+.menu-trigger span:nth-of-type(3) {
+    bottom: 0;
+}
+
+#menu02.active span:nth-of-type(1) {
+    -webkit-transform: translateY(20px) rotate(-315deg);
+    transform: translateY(20px) rotate(-315deg);
+}
+
+#menu02.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+#menu02.active span:nth-of-type(3) {
+    -webkit-transform: translateY(-20px) rotate(315deg);
+    transform: translateY(-20px) rotate(315deg);
+}
+
+*/
+
+/* --------------------------------------- */
+/* トップ画像 */
+#test {
+    background-image: url(../img/top.png);
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+}
+
+.testt {
+    background-color: rgb(0, 0, 0);
+}
+
+/* --------------------------------------- */
+
+.main_text {
+    color: white;
+    text-align: center;
+    line-height: 1.2em;
+    font-size: 13px;
+}
+
+.chi_a {
+    position: absolute;
+    left: -1%;
+    top: -200px;
+    width: 100%;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.1s;
+}
+
+
+.chi_b {
+    position: absolute;
+    left: -1%;
+    top: -200px;
+    width: 100%;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.chi_on {
+    opacity: 1;
+}
+
+.kimi_back {
+    position: absolute;
+    left: 80px;
+    top: -100px;
+    width: 60%;
+    overflow: hidden;
+    opacity: 0;
+    transition: 1s;
+    transform: translateY(20px);
+}
+
+/* --------------------------------------- */
+
+.oya {
+    position: relative;
+}
+
+.title_logo {
+    position: absolute;
+    width: 100%;
+    top: -150px;
+    overflow: hidden;
+    opacity: 0;
+    transition: 1s;
+    transform: translateY(20px);
+}
+
+.title_back {
+    position: relative;
+    width: 100%;
+    height: 150px;
+}
+
+.title_back {
+    background-color: #945f84;
+    animation: img-wrap 7s cubic-bezier(.4, 0, .2, 1);
+}
+
+@keyframes img-wrap {
+    0% {
+        clip-path: circle(0 at 50% 50%);
+        -webkit-clip-path: circle(0 at 50% 50%);
     }
-    animation();
-    $(window).scroll(function () {
-        animation();
-    });
-});
 
-$(function () {
-    function animation() {
-        $('.title_logo').each(function () {
-            var target = $(this).offset().top;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            if (scroll > target - windowHeight) {
-                $(this).css('opacity', '1');
-                $(this).css('transform', 'translateY(0)');
-            }
-        });
+    100% {
+        clip-path: circle(0 at 50% 50%);
+        -webkit-clip-path: circle(60% at 50% 50%);
     }
-    animation();
-    $(window).scroll(function () {
-        animation();
-    });
-});
-// ------------------------------------------
+}
 
 
-// $(function () {
-//     $('.menu-trigger').on('click', function () {
-//         $(this).toggleClass('active');
-//         return false;
-//     });
-// });
+
+/* --------------------------------------- */
+
+.fade_off {
+    opacity: 0;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    -ms-transition: all 1s;
+    transition: all 1s;
+}
+
+.fade_on {
+    opacity: 1;
+}
+
+/* --------------------------------------- */
+
+.text_box {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.kaiyo_text {
+    color: white;
+    line-height: 1.2em;
+}
+
+/* --------------------------------------- */
+.pc_1 {
+    width: 86%;
+    height: 160px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.733);
+}
+
+.pc_2 {
+    width: 86%;
+    height: 160px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.733);
+}
+
+/* ---------------------- */
+.pc_text {
+    width: 50%;
+    margin-left: auto;
+}
+
+.pca {
+    padding: 0.3em 1em 0;
+    font-size: 20px;
+    color: black;
+}
+
+.pcb {
+    width: 65%;
+    padding: 0 7px 0 10px;
+    margin-left: auto;
+    font-size: 13px;
+}
+
+/* ---------------------- */
+
+.pc_txet {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.pcc {
+    padding: 0.3em 1em 0;
+    font-size: 20px;
+    color: black;
+}
+
+.pcd {
+    width: 65%;
+    padding: 0 10px 0 7px;
+    margin-right: auto;
+    font-size: 13px;
+}
+
+/* ---------------------- */
+.flip {
+    transform-origin: 28%;
+    width: 150px;
+    animation: flip 4s infinite ease 1s both;
+    transform-style: preserve-3d;
+    z-index: 114514;
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+.front,
+.back {
+    width: 150px;
+    height: 150px;
+}
+
+.css-hidden {
+    position: absolute;
+    top: -150px;
+    left: -35px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.css-back {
+    transform: rotateY(180deg);
+}
+
+/* ---------------------- */
+
+.pilf {
+    transform-origin: 185%;
+    width: 150px;
+    animation: plif 4s infinite ease 3s both;
+    transform-style: preserve-3d;
+    z-index: 114514;
+}
+
+@keyframes plif {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+.tnorf,
+.kcab {
+    width: 150px;
+    height: 150px;
+}
+
+.css-neddih {
+    position: absolute;
+    top: -130px;
+    left: 140%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.css-kcab {
+    transform: rotateY(180deg);
+}
+
+/* --------------------------------------- */
+
+.chara {
+    color: white;
+    line-height: 1.2em;
+    margin: 0 1.5em;
+}
+
+/* --------------------------------------- */
+.end {
+    color: white;
+    line-height: 1.5em;
+    text-align: center;
+    font-size: 15px;
+}
+
+.day {
+    color: white;
+    line-height: 1.5em;
+    text-align: center;
+    font-size: 27px;
+    font-family: 'HGP行書体';
+}
+
+/* ------------------------------------------ */
+
+.account {
+    color: #fff;
+    font-size: 5px;
+    text-align: center;
+}
+
+.icon_last {
+    display: inline-block;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* ----------------------------------------------- */
