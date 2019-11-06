@@ -345,17 +345,23 @@ body {
 }
 
 /* ---------------------- */
+.css-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
 
 .front {
     left: -35px;
-    top: -150px;
-    width: 150px;
-    height: 150px;
-    position: absolute;
 }
 
 .back {
     left: 35px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.front,
+.back {
     top: -150px;
     width: 150px;
     height: 150px;
