@@ -362,28 +362,22 @@ body {
     }
 }
 
-.front {
-    left: -35px;
-}
-
-.back {
-    left: 35px;
-}
-
-.front,
-.back {
-    top: -150px;
-    width: 150px;
-    height: 150px;
-    position: absolute;
-}
 
 .css-hidden {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 150px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
 
+.css-front {
+    left: -35px;
+}
+
 .css-back {
+    left: 35px;
     transform: rotateY(180deg);
 }
 
