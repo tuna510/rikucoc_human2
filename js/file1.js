@@ -36,6 +36,33 @@ $(function () {
     });
 });
 
+// 血がびしゃあ
+$(function () {
+    $(window).scroll(function () {
+        $(".chi_a").each(function () {
+            var imgPos = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > imgPos - windowHeight + windowHeight / 1.5) {
+                $(this).addClass("chi_on");
+            }
+        });
+    });
+});
+
+$(function () {
+    $(window).scroll(function () {
+        $(".chi_b").each(function () {
+            var imgPos = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > imgPos - windowHeight + windowHeight / 1.5) {
+                $(this).addClass("chi_on");
+            }
+        });
+    });
+});
+
 // カードがふわっと出てくる
 $(function () {
     function animation() {
