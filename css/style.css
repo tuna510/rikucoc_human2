@@ -371,16 +371,16 @@ body {
 .css-hidden {
     position: absolute;
     top: -150px;
+    left: -35px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
 
-.css-front {
+/* .css-front {
     left: -35px;
-}
+} */
 
 .css-back {
-    left: 28px;
     transform: rotateY(180deg);
 }
 
