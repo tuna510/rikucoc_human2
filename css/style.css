@@ -345,9 +345,21 @@ body {
 }
 
 /* ---------------------- */
-.css-hidden {
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
+.flip {
+    transform-origin: 28%;
+    width: 150px;
+    animation: flip 4s infinite ease 1s both;
+    transform-style: preserve-3d;
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
 }
 
 .front {
@@ -366,18 +378,23 @@ body {
     position: absolute;
 }
 
+.css-hidden {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
 .css-back {
     transform: rotateY(180deg);
 }
 
-.css-rotate {
+/* .css-rotate {
     transform-origin: 28%;
     width: 150px;
     transform-style: preserve-3d;
     animation: rotate 4s infinite ease 1s both;
-}
+} */
 
-@keyframes rotate {
+/* @keyframes rotate {
     from {
         transform: rotateY(0deg);
     }
@@ -385,7 +402,7 @@ body {
     to {
         transform: rotateY(360deg);
     }
-}
+} */
 
 /* ---------------------- */
 
