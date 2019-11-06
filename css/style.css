@@ -376,68 +376,45 @@ body {
     backface-visibility: hidden;
 }
 
-/* .css-front {
-    left: -35px;
-} */
-
 .css-back {
     transform: rotateY(180deg);
 }
 
-/* .css-rotate {
-    transform-origin: 28%;
-    width: 150px;
-    transform-style: preserve-3d;
-    animation: rotate 4s infinite ease 1s both;
-} */
+/* ---------------------- */
 
-/* @keyframes rotate {
-    from {
+.pilf {
+    transform-origin: 185%;
+    width: 150px;
+    animation: plif 4s infinite ease 3s both;
+    transform-style: preserve-3d;
+}
+
+@keyframes plif {
+    0% {
         transform: rotateY(0deg);
     }
 
-    to {
+    100% {
         transform: rotateY(360deg);
     }
-} */
-
-/* ---------------------- */
-
-.tnorf {
-    width: 150px;
-    height: 150px;
-    top: -130px;
-    left: 12.8em;
-    position: absolute;
 }
 
+.tnorf,
 .kcab {
-    left: -12.8em;
-    top: -130px;
     width: 150px;
     height: 150px;
+}
+
+.css-neddih {
     position: absolute;
+    top: -130px;
+    left: 140%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .css-kcab {
     transform: rotateY(180deg);
-}
-
-.css-etator {
-    transform-origin: 185%;
-    width: 150px;
-    transform-style: preserve-3d;
-    animation: etator 4s infinite ease 3s both;
-}
-
-@keyframes etator {
-    from {
-        transform: rotateY(0deg);
-    }
-
-    to {
-        transform: rotateY(360deg);
-    }
 }
 
 /* --------------------------------------- */
