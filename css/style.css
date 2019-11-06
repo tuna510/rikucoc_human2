@@ -356,8 +356,6 @@ body {
 
 .back {
     left: 35px;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
 }
 
 .front,
