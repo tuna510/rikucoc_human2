@@ -29,7 +29,7 @@ $(function () {
             var imgPos = $(this).offset().top;
             var scroll = $(window).scrollTop();
             var windowHeight = $(window).height();
-            if (scroll > imgPos - windowHeight + windowHeight / 5) {
+            if (scroll > imgPos - windowHeight + windowHeight / 4) {
                 $(this).addClass("fade_on");
             }
         });
@@ -43,7 +43,7 @@ $(function () {
             var imgPos = $(this).offset().top;
             var scroll = $(window).scrollTop();
             var windowHeight = $(window).height();
-            if (scroll > imgPos - windowHeight + windowHeight - 30) {
+            if (scroll > imgPos - windowHeight + windowHeight - 50) {
                 $(this).addClass("chi_on");
             }
         });
@@ -56,7 +56,7 @@ $(function () {
             var imgPos = $(this).offset().top;
             var scroll = $(window).scrollTop();
             var windowHeight = $(window).height();
-            if (scroll > imgPos - windowHeight + windowHeight - 30) {
+            if (scroll > imgPos - windowHeight + windowHeight - 50) {
                 $(this).addClass("chi_on");
             }
         });
