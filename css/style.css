@@ -219,6 +219,16 @@ body {
     font-size: 13px;
 }
 
+.start {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    opacity: 0;
+    animation-delay: 2s;
+    transition: 2s;
+    transform: translateY(20px);
+}
+
 .on_text {
     position: absolute;
     left: 0;
@@ -278,8 +288,9 @@ body {
     /* top: -150px; */
     overflow: hidden;
     opacity: 0;
-    transition: 1.5s;
-    transform: translateY(20px);
+    transition: 2s;
+    /* transform: translateY(20px); */
+    transform: translateY(0);
 }
 
 .title_back {
