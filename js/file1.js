@@ -119,4 +119,25 @@ $(function () {
         animation();
     });
 });
+
+// 1行目ふわっ
+$(function () {
+    function animation() {
+        setTimeout(function () {
+            $('.start').each(function () {
+                var target = $(this).offset().top;
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                if (scroll > target - windowHeight + 150) {
+                    $(this).css('opacity', '1');
+                    $(this).css('transform', 'translateY(0)');
+                }
+            });
+        }, 2000)
+    }
+    animation();
+    $(window).scroll(function () {
+        animation();
+    });
+});
 // ------------------------------------------
