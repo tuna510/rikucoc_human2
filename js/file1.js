@@ -43,7 +43,7 @@ $(function () {
             var imgPos = $(this).offset().top;
             var scroll = $(window).scrollTop();
             var windowHeight = $(window).height();
-            if (scroll > imgPos - windowHeight + windowHeight - 250) {
+            if (scroll > imgPos - windowHeight + windowHeight - 200) {
                 $(this).addClass("chi_on");
             }
         });
@@ -56,7 +56,7 @@ $(function () {
             var imgPos = $(this).offset().top;
             var scroll = $(window).scrollTop();
             var windowHeight = $(window).height();
-            if (scroll > imgPos - windowHeight + windowHeight - 200) {
+            if (scroll > imgPos - windowHeight + windowHeight - 150) {
                 $(this).addClass("chi_on");
             }
         });
