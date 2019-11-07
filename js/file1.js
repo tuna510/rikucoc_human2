@@ -29,7 +29,7 @@ $(function () {
             var imgPos = $(this).offset().top;
             var scroll = $(window).scrollTop();
             var windowHeight = $(window).height();
-            if (scroll > imgPos - windowHeight + windowHeight / 4) {
+            if (scroll > imgPos - windowHeight + windowHeight / 5) {
                 $(this).addClass("fade_on");
             }
         });
@@ -43,7 +43,7 @@ $(function () {
             var imgPos = $(this).offset().top;
             var scroll = $(window).scrollTop();
             var windowHeight = $(window).height();
-            if (scroll > imgPos - windowHeight + windowHeight - 50) {
+            if (scroll > imgPos - windowHeight + windowHeight - 250) {
                 $(this).addClass("chi_on");
             }
         });
@@ -56,7 +56,7 @@ $(function () {
             var imgPos = $(this).offset().top;
             var scroll = $(window).scrollTop();
             var windowHeight = $(window).height();
-            if (scroll > imgPos - windowHeight + windowHeight - 50) {
+            if (scroll > imgPos - windowHeight + windowHeight - 200) {
                 $(this).addClass("chi_on");
             }
         });
@@ -70,7 +70,7 @@ $(function () {
             var target = $(this).offset().top;
             var scroll = $(window).scrollTop();
             var windowHeight = $(window).height();
-            if (scroll > target - windowHeight) {
+            if (scroll > target - windowHeight + 150) {
                 $(this).css('opacity', '0.5');
                 $(this).css('transform', 'translateY(0)');
             }
@@ -82,13 +82,33 @@ $(function () {
     });
 });
 
+// タイトルがふわっと出てくる
 $(function () {
     function animation() {
         $('.title_logo').each(function () {
             var target = $(this).offset().top;
             var scroll = $(window).scrollTop();
             var windowHeight = $(window).height();
-            if (scroll > target - windowHeight) {
+            if (scroll > target - windowHeight + 150) {
+                $(this).css('opacity', '1');
+                $(this).css('transform', 'translateY(0)');
+            }
+        });
+    }
+    animation();
+    $(window).scroll(function () {
+        animation();
+    });
+});
+
+// 枠ふわっ
+$(function () {
+    function animation() {
+        $('.huwa').each(function () {
+            var target = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > target - windowHeight + 150) {
                 $(this).css('opacity', '1');
                 $(this).css('transform', 'translateY(0)');
             }
@@ -100,11 +120,3 @@ $(function () {
     });
 });
 // ------------------------------------------
-
-
-// $(function () {
-//     $('.menu-trigger').on('click', function () {
-//         $(this).toggleClass('active');
-//         return false;
-//     });
-// });
