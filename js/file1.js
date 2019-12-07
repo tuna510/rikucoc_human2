@@ -71,7 +71,61 @@ $(function () {
             var scroll = $(window).scrollTop();
             var windowHeight = $(window).height();
             if (scroll > target - windowHeight + 150) {
-                $(this).css('opacity', '0.5');
+                $(this).css('opacity', '0.6');
+                $(this).css('transform', 'translateY(0)');
+            }
+        });
+    }
+    animation();
+    $(window).scroll(function () {
+        animation();
+    });
+});
+
+$(function () {
+    function animation() {
+        $('.kimi_back2').each(function () {
+            var target = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > target - windowHeight + 150) {
+                $(this).css('opacity', '0.3');
+                $(this).css('transform', 'translateY(0)');
+            }
+        });
+    }
+    animation();
+    $(window).scroll(function () {
+        animation();
+    });
+});
+
+$(function () {
+    function animation() {
+        $('.kimi_back3').each(function () {
+            var target = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > target - windowHeight + 150) {
+                $(this).css('opacity', '0.3');
+                $(this).css('transform', 'translateY(0)');
+            }
+        });
+    }
+    animation();
+    $(window).scroll(function () {
+        animation();
+    });
+});
+
+$(function () {
+    function animation() {
+        $('.kimi_back4').each(function () {
+            var target = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > target - windowHeight + 150) {
+                $(this).css('opacity', '0.3');
                 $(this).css('transform', 'translateY(0)');
             }
         });
@@ -141,3 +195,66 @@ $(function () {
     });
 });
 // ------------------------------------------
+// HOふわっと
+$(function () {
+    function animation() {
+        $('.test2').each(function () {
+            var target = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > target - windowHeight + 150) {
+                $(this).css('opacity', '1');
+                $(this).css('transform', 'translateY(0)');
+            }
+        });
+    }
+    animation();
+    $(window).scroll(function () {
+        animation();
+    });
+});
+
+$(function () {
+    function animation() {
+        $('.test3').each(function () {
+            var target = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > target - windowHeight + 150) {
+                $(this).css('opacity', '1');
+                $(this).css('transform', 'translateY(0)');
+            }
+        });
+    }
+    animation();
+    $(window).scroll(function () {
+        animation();
+    });
+});
+
+//アコーディオンメニュー
+
+$(function () {
+    $('.button').prevAll().hide();
+    $('.button').click(function () {
+        if ($(this).prevAll().is(':hidden')) {
+            $(this).prevAll().slideDown();
+            $(this).children('img').attr("src", $('.button img').attr("src").replace("_more", "_close"));
+        } else {
+            $(this).prevAll().slideUp();
+            $(this).children('img').attr("src", $('.button img').attr("src").replace("_close", "_more"));
+        }
+    });
+});
+
+
+// ハンバーガーメニュー
+$(function () {
+    $('.sp_menu_button').on('click', function () {
+        if ($(this).hasClass('open')) {
+            $(this).removeClass('open');
+        } else {
+            $(this).addClass('open');
+        }
+    });
+});
