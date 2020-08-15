@@ -35,7 +35,7 @@
                             <li><a href="#top">TOP</a></li>
                             <li><a href="#title">LOG</a></li>
                             <li><a href="#schedule">SCHEDULE</a></li>
-                            <li><a href="#about">ABOUT</a></li>
+                            <li><a href="#about">about</a></li>
                             <li><a href="#cast">CAST</a></li>
 
                         </ul>
@@ -116,30 +116,32 @@
             <img src="./img/title_log.png" alt="" class="test_menu4">
         </p><br>
 
-        <script type="text/javascript">
-            function gate() {
-                var UserInput = prompt("入力してよ…君のパスワード:", "");
-                if (/\W+/g.test(UserInput)) {
-                    alert("半角英数字以外を入力しただと？ハッ…おもしれーPL");
-                } else if (UserInput != null) {
-                    location.href = "./log_html/" + UserInput + ".html";
-                }
-            }
-        </script>
+
 
         <a id="title"></a>
 
         <div class="text_box3">
             <div class="kaiyo_text fade_off">
 
+                <script type="text/javascript">
+                    function gate(img) {
+                        var UserInput = prompt("入力してよ…君のパスワード:", "");
+                        if (/\W+/g.test(UserInput)) {
+                            alert("半角英数字以外を入力しただと？ハッ…おもしれーPL");
+                        } else if (UserInput != null) {
+                            location.href = "./log_html/" + UserInput + ".html";
+                        }
+                    }
+                </script>
+
 
                 <ul class="top-banner">
-                    <li><button type="submit"><img src="./img/pc1.png" onclick="gate();"></button></li>
-                    <li><button type="submit"><img src="./img/pc2.png" onclick="gate();"></button></li>
+                    <li><img src="./img/pc1.png" onclick="gate();"></li>
+                    <li><img src="./img/pc2.png" onclick="gate();"></li>
                 </ul>
                 <ul class="top-banner">
-                    <li><button type="submit"><img src="./img/pc3.png" onclick="gate();"></button></li>
-                    <li><button type="submit"><img src="./img/pc4.png" onclick="gate();"></button></li>
+                    <li><img src="./img/pc3.png" onclick="gate();"></li>
+                    <li><img src="./img/pc4.png" onclick="gate();"></li>
                 </ul>
 
 
@@ -307,10 +309,10 @@ PL　：4人
 
 
                         <ul class="top-banner">
-                            <li><button type="submit"><img src="./img/pc1.png" onclick="gate();"></button></li>
-                            <li><button type="submit"><img src="./img/pc2.png" onclick="gate();"></button></li>
-                            <li><button type="submit"><img src="./img/pc3.png" onclick="gate();"></button></li>
-                            <li><button type="submit"><img src="./img/pc4.png" onclick="gate();"></button></li>
+                            <li><img src="./img/pc1.png" onclick="gate();"></li>
+                            <li><img src="./img/pc2.png" onclick="gate();"></li>
+                            <li><img src="./img/pc3.png" onclick="gate();"></li>
+                            <li><img src="./img/pc4.png" onclick="gate();"></li>
                         </ul>
 
 
