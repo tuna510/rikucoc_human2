@@ -612,3 +612,153 @@ body {
 .pcsize {
     text-align: center;
 }
+
+.logpage {
+    margin: 0 3em;
+    width: 80%;
+}
+
+.logpage {
+    margin: 0 3em;
+    width: 80%;
+}
+
+
+.top-banner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.top-banner li {
+    width: calc(100%/4);
+    padding: 5px;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.top-banner li img {
+    max-width: 100%;
+}
+
+.btn-square-pop {
+    position: relative;
+    display: inline-block;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #FFF;
+    border-radius: 4px;
+    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+}
+
+.btn-square-pop:active {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+}
+
+.log_day {
+    position: relative;
+    display: inline-block;
+    margin-top: 5px;
+    height: 30px;
+    width: 50%;
+    text-decoration: none;
+    color: #FFF;
+    border-radius: 4px;
+    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+    font-weight: bold;
+    text-align: center;
+    line-height: 25px;
+    opacity: 0.88;
+}
+
+.ee {
+    background: #ff9800;
+    border-bottom: solid 2px #be7200;
+}
+
+.ee:active {
+    border-bottom: solid 2px #ff9800;
+}
+
+.nn {
+    background: #e95388;
+    border-bottom: solid 2px #bd3061;
+}
+
+.nn:active {
+    border-bottom: solid 2px #e95388;
+}
+
+.ss {
+    background: #344d74;
+    border-bottom: solid 2px #223758;
+}
+
+.ss:active {
+    border-bottom: solid 2px #344d74;
+}
+
+.rr {
+    background: #af605d;
+    border-bottom: solid 2px #803e3c;
+}
+
+.rr:active {
+    border-bottom: solid 2px #af605d;
+}
+
+
+
+
+.split {
+    display: table;
+    width: 60%;
+    margin: 100px auto 0;
+}
+
+.split-item {
+    display: table-cell;
+    padding: 0 5px;
+}
+
+.split-left {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+
+}
+
+.split-left__inner {
+    height: 100%;
+    /* position: fixed; */
+}
+
+
+.split-right {
+    position: relative;
+    /* width: 50%;
+    margin: 0 auto; */
+}
+
+.split-right__inner {
+    height: 100%;
+    /* position: fixed; */
+}
+
+.kaiyo_text {
+    color: white;
+    line-height: 1.2em;
+    font-size: 15px;
+}
+
+.log_title {
+    color: white;
+    line-height: 1.2em;
+    font-size: 15px;
+    text-align: center;
+    margin: 50px auto 20px;
+}
