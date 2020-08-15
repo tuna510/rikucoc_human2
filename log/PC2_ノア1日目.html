@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>チャットログ</title>
+	<style>
+		html {
+			font-size: 14px;
+		}
+		body {
+			-webkit-text-size-adjust: 100%;
+			background-color: #ffffff;
+		}
+		h1 {
+			font-size: 20px;
+			margin: 1rem 1rem 0;
+			color: #000000;
+		}
+		.tab {
+			border: 1px solid #999;
+			margin: 2rem 1rem 1rem;
+			line-height: 1.5;
+			position: relative;
+		}
+		.tabtitle {
+			border: 1px solid transparent;
+			border-color: inherit;
+			background-color: inherit;
+			position: absolute;
+			top: -.8rem;
+			left: 1rem;
+			min-width: 7rem;
+			padding: 0 .5rem;
+			text-align: center;
+			font-size: 1rem;
+			z-index: 9999;
+			line-height: 1.4rem;
+		}
+		.player {
+			margin: 0;
+			padding: 0 .5rem;
+			padding-left: 10.5rem;
+			border-bottom: 1px dotted transparent;
+			border-color: inherit;
+			position: relative;
+		}
+		.player:last-child {
+			border-bottom: 0;
+		}
+		.player b {
+			display: block;
+			height: 100%;
+			width: 9rem;
+			padding: 0 .5rem;
+			border-right: 1px solid transparent;
+			border-color: inherit;
+			position: absolute;
+			top: 0;
+			left: 0;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		.tabtitle + .player {
+			padding-top: .7rem;
+		}
+		.tabtitle + .player b {
+			padding-top: .7rem;
+			height: calc(100% - .7rem);
+		}
+		.diceroll {
+			padding: 0 .5em;
+			color: #ffffff;
+		}
+
+		/* [雑談] タブ */
+		.t0 {
+			background-color: #ffffff;
+			border-color: #ffffff;
+			color: #000000;
+			font-size: .8rem;
+		}
+
+		/* [秘匿(りく,鰆じゃない)] タブ */
+		.t1 {
+			background-color: #ffffff;
+			border-color: #ffffff;
+			color: #000000;
+		}
+
+		/* 発言者：KP */
+		.p0 { color: #666666; }
+		.p0 .diceroll { background-color: #666666; }
+
+		/* 発言者：ノア */
+		.p1 { color: #e95388; }
+		.p1 .diceroll { background-color: #e95388; }
+	</style>
+</head>
+<body>
+	<h1>チャットログ</h1>
+	<div class="tab t0">
+		<div class="tabtitle">雑談</div>
+		<p class="player p0">
+			<b>KP</b>
+			秘匿タブです！おおっぴらにできないお話はこちらでお願いいたします！
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">秘匿(りく,鰆じゃない)</div>
+		<p class="player p0">
+			<b>KP</b>
+			【ノアさんの秘匿ハンドアウト】<br>
+			ハートのクイーン：正しい道を知りうるカード。騎士と王に道を示せるかは貴方次第だ。<br>
+			特権『正誤の確認』：GMに対し今後の展開を質問し、<br>
+			更に効果的な行動を聞くことが出来る。<br>
+			ただしこの特権は3回しか使えず、使用する時には『特権を使用する』と宣言しなければならない。<br>
+			PCが自身のカードの絵柄を知るタイミングは少し先になりますが、<br>
+			シナリオ開始時点からHOの効果は使用することが出来ます。<br>
+			メインタブにて宣言して下さいね。
+		</p>
+		<p class="player p1">
+			<b>ノア</b>
+			はい！
+		</p>
+	</div>
+</body>
+</html>

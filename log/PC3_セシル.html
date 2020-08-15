@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>チャットログ</title>
+	<style>
+		html {
+			font-size: 15px;
+		}
+
+		body {
+			-webkit-text-size-adjust: 100%;
+			background-color: #ffffff;
+		}
+
+		h1 {
+			font-size: 20px;
+			margin: 1rem 1rem 0;
+			color: #000000;
+		}
+
+		.tab {
+			border: 1px solid #999;
+			margin: 2rem 1rem 1rem;
+			line-height: 1.5;
+			position: relative;
+		}
+
+		.tabtitle {
+			border: 1px solid transparent;
+			border-color: inherit;
+			background-color: inherit;
+			position: absolute;
+			top: -.8rem;
+			left: 1rem;
+			min-width: 7rem;
+			padding: 0 .5rem;
+			text-align: center;
+			font-size: 1rem;
+			z-index: 9999;
+			line-height: 1.4rem;
+		}
+
+		.player {
+			margin: 0;
+			padding: 0 .5rem;
+			padding-left: 10.5rem;
+			border-bottom: 1px dotted transparent;
+			border-color: inherit;
+			position: relative;
+		}
+
+		.player:last-child {
+			border-bottom: 0;
+		}
+
+		.player b {
+			display: block;
+			height: 100%;
+			width: 9rem;
+			padding: 0 .5rem;
+			border-right: 1px solid transparent;
+			border-color: inherit;
+			position: absolute;
+			top: 0;
+			left: 0;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		.tabtitle+.player {
+			padding-top: .7rem;
+		}
+
+		.tabtitle+.player b {
+			padding-top: .7rem;
+			height: calc(100% - .7rem);
+		}
+
+		.diceroll {
+			padding: 0 .5em;
+			color: #ffffff;
+		}
+
+		/* [雑談] タブ */
+		.t0 {
+			background-color: #ffffff;
+			border-color: #ffffff;
+			color: #000000;
+			font-size: .8rem;
+		}
+
+		/* [秘匿(たろすけ,りく)] タブ */
+		.t1 {
+			background-color: #ffffff;
+			border-color: #ffffff;
+			color: #000000;
+		}
+
+		/* 発言者：KP */
+		.p0 {
+			color: #666666;
+		}
+
+		.p0 .diceroll {
+			background-color: #666666;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>チャットログ</h1>
+	<div class="tab t0">
+		<div class="tabtitle">雑談</div>
+		<p class="player p0">
+			<b>KP</b>
+			秘匿タブです！秘密っぽい会話はこちらで行っていきます！
+		</p>
+	</div>
+
+	<div class="tab t1">
+		<div class="tabtitle">秘匿(たろすけ,りく)</div>
+		<p class="player p0">
+			<b>KP</b>
+			【セシルさんの秘匿ハンドアウト】<br>
+			ジョーカー：未来を途絶えさせるカード。絶望を彼等に与えることがあなたの義務だ。<br>
+			義務『確殺の暗躍』：とあるNPCが【切り札】というワードを使った時にRP込でPCのうちの一人を殺害する行動を行わなければならない。この行動を行った時判定を行わず特権無視、回復不可の即死ダメージを対象に与えることが出来る。ただしこの特権でスペードのキングの持ち主を選択できなかった場合、貴方はBADEDが確定する。また他のカードの効果を全て把握できる。<br>
+			さて、ジョーカーのあなたにはちょっとしたプレゼントを。<br>
+			ある日、あなたの両親が行方不明になりました。<br>
+			気付いてから程なくして、このような手紙が届きます。<br>
+			『Dear セシル・ハーティリー<br>
+			あなたのご両親は私が預かっています。<br>
+			二人とも無事ですので、ご安心ください。<br>
+			しかし、折角手に入れた人間をこのまま返すのはあまりに惜しい。<br>
+			そこで、あなたには私のお願いをひとつ、聞いていただきましょう。<br>
+			私が【切り札】という言葉を使って合図したら、【キング】の命を狙って下さい。<br>
+			どういうことかって？そのうち分かりますよ。<br>
+			もちろん、このことは誰にも教えないでくださいね。<br>
+			もしもあなたがこの手紙の内容を公開してしまったら、私は二人と『お話し』しなくてはいけませんから。<br>
+			あなたがきちんと私の言うことを聞いてくれたなら、あなたのご両親は無事に解放してあげましょう。<br>
+			それでは、会える日を楽しみにしています。<br>
+			From　Human Maker』<br>
+			手紙には二枚の写真が同封されています。<br>
+			写っているのは、口をガムテープで塞がれ 椅子に縛り付けられている両親の姿でした。<br>
+			<br>
+			この手紙を読んだ上で、あなたには今回のシナリオに参加していただきましょう。
+		</p>
+	</div>
+</body>
+
+</html>
