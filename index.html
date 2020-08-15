@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./css/style.css" media="screen and (max-width:700px)">
-    <link rel="stylesheet" href="./css/style2.css" media="screen and (min-width:701px)">
+    <link rel="stylesheet" href="./css/style.css" media="screen and (max-width:750px)">
+    <link rel="stylesheet" href="./css/style2.css" media="screen and (min-width:751px)">
     <script src="./js/jquery-3.4.1.js"></script>
     <script type="text/javascript" src="./js/file1.js"></script>
     <link href="https://fonts.googleapis.com/earlyaccess/kokoro.css" rel="stylesheet">
@@ -33,9 +33,11 @@
                     <div class="cp_menu">
                         <ul>
                             <li><a href="#top">TOP</a></li>
-                            <li><a href="#title">ABOUT</a></li>
-                            <li><a href="#chara">CHARA MAKE</a></li>
+                            <li><a href="#title">LOG</a></li>
+                            <li><a href="#schedule">SCHEDULE</a></li>
+                            <li><a href="#about">about</a></li>
                             <li><a href="#cast">CAST</a></li>
+
                         </ul>
                     </div>
                 </div>
@@ -43,6 +45,8 @@
                 </div>
             </div>
         </header>
+
+
 
 
         <div class="oya">
@@ -109,11 +113,71 @@
         <br><br><br><br><br>
 
         <p class="main_text fade_off">
-            <img src="./img/title_about.png" alt="" class="test_menu3">
+            <img src="./img/title_log.png" alt="" class="test_menu4">
+        </p><br>
+
+        <script type="text/javascript">
+            function gate() {
+                var UserInput = prompt("入力してよ…君のパスワード:", "");
+                if (/\W+/g.test(UserInput)) {
+                    alert("半角英数字以外を入力しただと？ハッ…おもしれーPL");
+                } else if (UserInput != null) {
+                    location.href = "./log_html/" + UserInput + ".html";
+                }
+            }
+        </script>
+
+        <a id="title"></a>
+
+        <div class="text_box3">
+            <div class="kaiyo_text fade_off">
+
+
+                <ul class="top-banner">
+                    <li><button type="submit"><img src="./img/pc1.png" onclick="gate();"></button></li>
+                    <li><button type="submit"><img src="./img/pc2.png" onclick="gate();"></button></li>
+                </ul>
+                <ul class="top-banner">
+                    <li><button type="submit"><img src="./img/pc3.png" onclick="gate();"></button></li>
+                    <li><button type="submit"><img src="./img/pc4.png" onclick="gate();"></button></li>
+                </ul>
+
+
+            </div>
+        </div>
+
+        <br><br>
+
+
+        <p class="main_text fade_off">
+            <img src="./img/title_suke.png" alt="" class="test_menu4">
         </p><br>
 
 
-        <a id="title"></a>
+        <a id="schedule"></a>
+
+        <div class="text_box2">
+            <div class="kaiyo_text fade_off">
+                <pre>
+<font color="gray">8/12 21:00~23:00</font>
+8/16 21:00~23:00
+8/26 21:00~23:00
+8/27 21:00~23:00
+8/29 21:00~25:00
+9/3   21:00~23:00
+9/12 21:00~25:00
+9/15 21:00~23:00
+                </pre>
+            </div>
+        </div>
+
+        <br><br>
+
+
+        <a id="about"></a>
+        <p class="main_text fade_off">
+            <img src="./img/title_about.png" alt="" class="test_menu3">
+        </p><br>
 
         <div class="text_box">
             <div class="kaiyo_text fade_off">
@@ -156,66 +220,6 @@ PL　：4人
 
             </div>
 
-            <div class="fade_off"><img src="./img/title_make.png" alt="" class="test_menu2"></div>
-            <br>
-
-            <a id="chara"></a>
-
-            <div class="text_box">
-                <div class="kaiyo_text2 fade_off">
-                    <p>使用可能</p>
-                    <p>基本ルルブ / 2010 / 2015</p>
-                    <p>※今回七版は使用しません</p>
-                    <br>
-                    <p>推奨技能</p>
-                    <p>探索技能、戦闘技能</p>
-                    <br>
-                </div>
-            </div>
-
-            <div class="content">
-                <div class="chara">
-                    <br>
-                    <p>・新規での作成をお願いいたします。</p>
-                    <br>
-                    <p>・作成は一括振り直し1回、個別振り直し3回まで。交換は決め方が同じステータス同士(3d6と3d6、2d6+6と2d6+6など)に限り可とします。</p>
-                    <br>
-                    <p>・技能値の上限は設けていません。</p>
-                    <br>
-                    <p> ・SAN値が80以上の場合、超過分をセッション中
-                        預からせていただきます。</p>
-                    <br>
-                    <p> ・特徴は2つまで付与可能。特徴有り無し両方の探索者がいた場合、DM等で相談の上どちらかに合わせます。</p>
-                    <br>
-                    <p> ・CSの提出はKPのみが確認できるよう、個別DMなどでお願
-                        いいたします。</p>
-                    <br>
-                    <p> ・職業サンプルにない技能構成を使用したい場合は
-                        作成前にご相談下さい。</p>
-                    <br>
-                    <p> ・その他はルールブックに従い作成をお願いいたし
-                        ます。ルールブックを所持していない場合はCS提出前に申告して下さい。</p>
-                    <br>
-                    <p> 【秘匿HOとCS】
-                        <br>秘匿HO配布する際に確認させていただくCSはざっくりしたもので構いません。
-                        PLさんの中で「だいたいこんな感じの人間」という構想をそれとなく作っておいていただいて、そこにスパイスのようにHOが乗る感じです
-                        （職業、技能値振り、性別、性格あたりを決めておいていただけると○。もちろんHO配布後の変更もOKですし、HO配布前に設定をがっちり固めていただいても問題ありません）。
-                        HO配布後は卓の一週間前くらいまでに完成したCSを提出していただければOKです。</p>
-                    <br>
-                    <p>【PC同士の関係性の設定について】<br>
-                        DMなどで予め摺り合わせを行う場合、
-                        PCの名前・年齢・職業などは公開してしまって構いません。
-                        PC番号を決定する際に「こういうキャラにするからこうしよう！」だとかを相談していただいても問題ありません。
-                        不安なことがあればお気軽にご相談下さいね。</p>
-
-                </div><br>
-                <p class="button">
-                    <img src="./img/more_more.png" alt="" class="moremenu"></p>
-            </div>
-
-
-
-            <br><br><br>
             <div class="fade_off">
                 <img src="./img/title_cre.png" alt="" class="test_menu"></div>
             <br>
@@ -244,19 +248,17 @@ PL　：4人
                 <br>
                 <div class="fade_off">
                     <b>Keeper</b><br>
-                    りく<br><br>
-
+                    りく<br>
                 </div>
                 <br>
                 <div class="fade_off">
                     <b>Scenario</b><br>
-                    ニム様<br><br>
-
+                    ニム様<br>
                 </div>
                 <br><br>
 
 
-                <div class="day fade_off">AUGUST 2020...</div>
+                <div class="day fade_off">Now Showing!</div>
 
                 <br><br><br>
             </div>
@@ -283,7 +285,39 @@ PL　：4人
 
 
                 <br>※レスポンシブ対応してないのでできればスマホから見てね※<br>
+                <br>
 
+
+
+
+
+                <pre>
+<font color="gray">8/12 21:00~23:00</font>
+8/16 21:00~23:00
+8/26 21:00~23:00
+8/27 21:00~23:00
+8/29 21:00~25:00
+9/3   21:00~23:00
+9/12 21:00~25:00
+9/15 21:00~23:00
+                </pre>
+
+                <div class="text_box3">
+                    <div class="kaiyo_text">
+
+
+                        <ul class="top-banner">
+                            <li><button type="submit"><img src="./img/pc1.png" onclick="gate();"></button></li>
+                            <li><button type="submit"><img src="./img/pc2.png" onclick="gate();"></button></li>
+                            <li><button type="submit"><img src="./img/pc3.png" onclick="gate();"></button></li>
+                            <li><button type="submit"><img src="./img/pc4.png" onclick="gate();"></button></li>
+                        </ul>
+
+
+                    </div>
+                </div>
+
+                <br><br>
                 <br><br>嗤う人間師<br><br>
                 他者との差異を挙げろと言われれば、<br>
                 多様な答えが帰ってくるだろう。
@@ -361,61 +395,32 @@ PL　：4人
         </font>
         <br><br><br>
 
-
-        <font color="ffffff">
-            <div class="chara">
-                <div class="">
-                    <p>使用可能</p>
-                    <p>基本ルルブ / 2010 / 2015</p>
-                    <p>※今回七版は使用しません</p>
-                    <br>
-                    <p>推奨技能</p>
-                    <p>探索技能、戦闘技能</p>
-                    <br>
-
-                    <br>
-                    <p>・新規での作成をお願いいたします。</p>
-                    <br>
-                    <p>・作成は一括振り直し1回、個別振り直し3回まで。交換は決め方が同じステータス同士(3d6と3d6、2d6+6と2d6+6など)に限り可とします。</p>
-                    <br>
-                    <p>・技能値の上限は設けていません。</p>
-                    <br>
-                    <p> ・SAN値が80以上の場合、超過分をセッション中
-                        預からせていただきます。</p>
-                    <br>
-                    <p> ・特徴は2つまで付与可能。特徴有り無し両方の探索者がいた場合、DM等で相談の上どちらかに合わせます。</p>
-                    <br>
-                    <p> ・CSの提出はKPのみが確認できるよう、個別DMなどでお願
-                        いいたします。</p>
-                    <br>
-                    <p> ・職業サンプルにない技能構成を使用したい場合は
-                        作成前にご相談下さい。</p>
-                    <br>
-                    <p> ・その他はルールブックに従い作成をお願いいたし
-                        ます。ルールブックを所持していない場合はCS提出前に申告して下さい。</p>
-                    <br>
-                    <p> 【秘匿HOとCS】
-                        <br>秘匿HO配布する際に確認させていただくCSはざっくりしたもので構いません。
-                        PLさんの中で「だいたいこんな感じの人間」という構想をそれとなく作っておいていただいて、そこにスパイスのようにHOが乗る感じです
-                        （職業、技能値振り、性別、性格あたりを決めておいていただけると○。もちろんHO配布後の変更もOKですし、HO配布前に設定をがっちり固めていただいても問題ありません）。
-                        HO配布後は卓の一週間前くらいまでに完成したCSを提出していただければOKです。</p>
-                    <br>
-                    <p>【PC同士の関係性の設定について】<br>
-                        DMなどで予め摺り合わせを行う場合、
-                        PCの名前・年齢・職業などは公開してしまって構いません
-                        （個人的には秘匿HOの内容さえ公開しなければ良いかなあという感覚）。
-                        PC番号を決定する際に「こういうキャラにするからこうしよう！」だとかを相談していただいても問題ありません。
-                        不安なことがあればお気軽にご相談下さいね。</p>
-
-                </div><br><br><br><br>
-
-
-
+        <div class="pcsize">
+            <font color="white">
+                <b>Play Character</b><br>
+                PC1：アーネスト・ホーカー<br>
+                PC2：ノア・テイラー　　　<br>
+                PC3：セシル・ハーティリー<br>
+                PC4：セリーナ・リルバーン<br>
+                <br>
                 <br><br>
-            </div>
-            <div class="account">@riku_TinTin</div><br>
-        </font>
+
+                <b>Player</b><br>
+                PL1：やのひと　<br>
+                PL2：快桃アルコ<br>
+                PL3：たろすけ　<br>
+                PL4：なもち　　<br><br>
+
+
+            </font>
+        </div>
+
+
+
+        <br><br>
     </div>
+    <div class="account">@riku_TinTin</div><br>
+
 </body>
 
 </html>
