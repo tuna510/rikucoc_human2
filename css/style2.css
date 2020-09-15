@@ -762,3 +762,39 @@ body {
     text-align: center;
     margin: 50px auto 20px;
 }
+
+
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    width: 15%;
+    min-width: 75px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+nav ul li.current a {
+    color: #F33135;
+}
+
+nav ul li a:hover {
+    color: #E7DA66;
+}
+
+
+.tatie {
+    width: 65%;
+}
