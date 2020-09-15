@@ -647,6 +647,19 @@ body {
     max-width: 100%;
 }
 
+
+.top-banner2 li {
+    width: 50%;
+    padding: 5px;
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0 25% 0;
+}
+
+.top-banner2 li img {
+    max-width: 100%;
+}
+
 .btn-square-pop {
     position: relative;
     display: inline-block;
@@ -756,4 +769,40 @@ body {
 .split-right__inner {
     height: 100%;
     /* position: fixed; */
+}
+
+
+
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    width: 15%;
+    min-width: 75px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+nav ul li.current a {
+    color: #F33135;
+}
+
+nav ul li a:hover {
+    color: #E7DA66;
+}
+
+.tatie {
+    width: 80%;
 }
